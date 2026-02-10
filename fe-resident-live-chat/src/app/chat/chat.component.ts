@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ChatComponent {
   username: string = '';
+  message: string = '';
+  messages: any = [];
   isUserNameSet: boolean = false;
 
   constructor(){
@@ -14,7 +16,9 @@ export class ChatComponent {
   }
   
   sendMessage(){
-    console.log("Message sent");
+    console.log(this.message);
+    this.messages.push(this.message);
+    this.message = '';
   }
 
   createUser(){

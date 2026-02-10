@@ -6,14 +6,12 @@
     <button type = "submit" class="btn btn-primary">Submit</button>
 </form>
 
-<div *ngIf="isUserNameSet">
-    <ul class = "messages">
-        <li class = 'pUserPrompt'>First messageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeea</li>
-        <li class = 'pUserPrompt'>Second message</li>
-        <li class = 'pUserPrompt'>Third message</li>
-    </ul>
-</div>
+<ul *ngFor="let message of messages" class = "messages">
+    <div class="messagesContainer" *ngIf="isUserNameSet">
+        <p class = "pUserPrompt">{{username}}: </p><li class = 'pUserPrompt'>{{message}}</li>
+    </div>
+</ul>
 
 <form *ngIf="isUserNameSet" class = "formMessage">
-    <input type="text" class="form-control" placeholder="Write something"> <button (click)="sendMessage()" class="btn btn-primary">Send</button>
+    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="message" placeholder="Write something"> <button (click)="sendMessage()" class="btn btn-primary">Send</button>
 </form>

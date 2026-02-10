@@ -10,6 +10,14 @@ ul {
     list-style: none;
 }
 
+.messagesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
 li {
     background-color: #2A2A2A; 
     color: #FFFFFF;
