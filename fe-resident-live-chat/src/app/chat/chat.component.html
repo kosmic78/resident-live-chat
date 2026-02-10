@@ -1,0 +1,19 @@
+
+<form *ngIf="!isUserNameSet" (ngSubmit)="createUser()" class = "formUserName">
+    <p class = 'pUserPrompt'>Username</p>
+    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="username" placeholder="Enter username">
+    <p></p>
+    <button type = "submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div *ngIf="isUserNameSet">
+    <ul class = "messages">
+        <li class = 'pUserPrompt'>First messageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeea</li>
+        <li class = 'pUserPrompt'>Second message</li>
+        <li class = 'pUserPrompt'>Third message</li>
+    </ul>
+</div>
+
+<form *ngIf="isUserNameSet" class = "formMessage">
+    <input type="text" class="form-control" placeholder="Write something"> <button (click)="sendMessage()" class="btn btn-primary">Send</button>
+</form>

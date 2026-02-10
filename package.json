@@ -1,0 +1,25 @@
+{
+  "name": "resident-live-chat",
+  "version": "1.0.0",
+  "description": "Live chat app for residents.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kosmic78/resident-live-chat.git"
+  },
+  "author": "Cristian Gabor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kosmic78/resident-live-chat/issues"
+  },
+  "homepage": "https://github.com/kosmic78/resident-live-chat#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11",
+    "socket.io": "^4.8.3"
+  }
+}

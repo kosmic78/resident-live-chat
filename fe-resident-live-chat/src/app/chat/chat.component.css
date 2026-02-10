@@ -1,0 +1,43 @@
+.formUserName {
+    display: grid;          
+    align-items: center;       
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background-color: #2A2A2A; 
+    color: #FFFFFF;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 10px 8px;
+    word-wrap: break-word;      /* break text for long messages */
+    text-align: left;
+    max-width: 80%;             /* the text messages don't ocupy all the div */
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin:20px;
+}
+
+.formMessage {
+    display: flex;
+    justify-content: center;
+    gap: 10px;                /* space between input and button */
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto; /* had to set it to auto for the phone screen tilt */
+}
+
+.pUserPrompt {
+    color: #FFFFFF;
+}
