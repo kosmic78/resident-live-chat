@@ -1,15 +1,19 @@
-This project runs on Angular 16 and Node.js v18.20.8 LTS. 
-Also, for this version of Angular, for installing the socket.io package we will need ngx-socket-io v4.5.0.
+1. Prerequisites
+Node.js v18.20.8 LTS
+Angular CLI v16
 
-Prerequisite:
-On the fe-resident-live-chat folder:
-npm install ngx-socket-io@4.5.0 - on cmd for installing socket.io package for Angular
+2. Backend Setup
+cd resident-live-chat
+npm install
+nodemon index.js
 
-On the resident-live-chat folder:
-npm install express - on powershell for installing express
-npm install nodemon - on powershell for installing nodemon
-npm install socket.io - on powershell for installing socket.io
+Server running on:
+http://localhost:8988
 
-How to run the project (FE + BE):
-ng serve - on powershell on the fe-resident-live-chat folder for serving the angular app
-nodemon - on on cmd on the resident-live-chat folder for serving the server
+3. Frontend Setup
+cd fe-resident-live-chat
+npm install
+ng serve
+
+Angular app running on:
+http://localhost:4200
