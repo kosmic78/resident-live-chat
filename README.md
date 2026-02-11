@@ -2,7 +2,8 @@ Prerequisites
 Node.js v18.20.8 LTS
 Angular CLI v16
 
-Backend Setup
+Backend Setup:
+
 cd resident-live-chat
 
 npm install
@@ -12,7 +13,8 @@ nodemon index.js
 Server running on:
 http://localhost:8988
 
-Frontend Setup
+Frontend Setup:
+
 cd fe-resident-live-chat
 
 npm install
