@@ -4,7 +4,9 @@ Angular CLI v16
 
 Backend Setup
 cd resident-live-chat
+
 npm install
+
 nodemon index.js
 
 Server running on:
@@ -12,7 +14,9 @@ http://localhost:8988
 
 Frontend Setup
 cd fe-resident-live-chat
+
 npm install
+
 ng serve
 
 Angular app running on:
