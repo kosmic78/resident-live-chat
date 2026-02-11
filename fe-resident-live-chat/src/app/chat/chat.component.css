@@ -16,6 +16,7 @@ ul {
     align-items: center;
     text-align: center;
     gap: 10px;
+    max-width: 80%; /* the text messages don't ocupy all the div */
 }
 
 li {
@@ -37,12 +38,21 @@ li {
     margin:20px;
 }
 
+.chatPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputSection{
+    position:absolute;
+    bottom: 0;
+}
+
 .formMessage {
     display: flex;
     justify-content: center;
     gap: 10px;                /* space between input and button */
-    width: 90%;
-    max-width: 500px;
     margin: 20px auto; /* had to set it to auto for the phone screen tilt */
 }
 

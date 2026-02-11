@@ -1,4 +1,3 @@
-
 <form *ngIf="!isUserNameSet" (ngSubmit)="createUser()" class = "formUserName">
     <p class = 'pUserPrompt'>Username</p>
     <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="username" placeholder="Enter username">
@@ -6,12 +5,17 @@
     <button type = "submit" class="btn btn-primary">Submit</button>
 </form>
 
-<ul *ngFor="let message of messages" class = "messages">
-    <div class="messagesContainer" *ngIf="isUserNameSet">
-        <p class = "pUserPrompt">{{username}}: </p><li class = 'pUserPrompt'>{{message}}</li>
+<div class = "chatPage">
+    <ul *ngFor="let message of messages" class = "messages">
+        <div class="messagesContainer" *ngIf="isUserNameSet">
+            <p class = "pUserPrompt">{{message.username}}: </p><li class = 'pUserPrompt'>{{message.message}}</li>
+        </div>
+    </ul>
+    
+    <div class = "inputSection">
+        <form *ngIf="isUserNameSet" class = "formMessage">
+            <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="message" placeholder="Write something"> 
+            <button (click)="sendMessage()" class="btn btn-primary">Send</button>
+        </form>
     </div>
-</ul>
-
-<form *ngIf="isUserNameSet" class = "formMessage">
-    <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" [(ngModel)]="message" placeholder="Write something"> <button (click)="sendMessage()" class="btn btn-primary">Send</button>
-</form>
+</div>
